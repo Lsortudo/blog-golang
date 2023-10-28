@@ -8,9 +8,9 @@ import (
 	"github.com/lsortudo/blog-golang/api/responses"
 )
 
-func setMiddlewareJSON(next http.HandlerFunc) http.HandlerFunc {
+func SetMiddlewareJSON(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("content-type", "application/json")
+		w.Header().Set("Content-Type", "application/json")
 		next(w, r)
 	}
 }
